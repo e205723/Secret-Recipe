@@ -101,6 +101,3 @@ ide () {
 
 # use vim installed with homebrew
 export PATH="/usr/local/bin:$PATH"
-
-# cl command
-alias cl='clear; ls'
