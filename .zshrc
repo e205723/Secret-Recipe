@@ -58,7 +58,7 @@ PROMPT='
 %F{yellow}$%f '
 
 # delete all containers and delete all images
-alias docker-prune='docker container stop $(docker container ls -aq) && docker container rm $(docker container ls -aq) && docker image rm $(docker image ls -aq) && docker network rm $(docker network ls -q)'
+alias docker-prune='docker container stop $(docker container ls -aq) ; docker container rm -f $(docker container ls -aq) ; docker image rm -f $(docker image ls -aq) ; docker volume rm -f $(docker volume ls -q) ; docker network rm $(docker network ls -q)'
 
 # open Chrome without the CORS Policy
 alias chrome-nocors='open /Applications/Google\ Chrome.app --args --user-data-dir="/var/tmp/Chrome dev session" --disable-web-security'
@@ -99,5 +99,50 @@ ide () {
  tmux split-window -h -p 50
 }
 
+# pwd + pbcopy
+pwdy () {
+  pwd | pbcopy
+}
+
 # use vim installed with homebrew
 export PATH="/usr/local/bin:$PATH"
+
+# login in the same directory as the last time when exiting
+export dirfile="$HOME/.who.$host.$tty"
+export dirhfile="$HOME/.who.$host"
+
+if [[ ! -f $dirfile  ]]; then
+    if [[ ! -f $dirhfile  ]]; then
+        dir=$HOME
+    else
+        dir=`cat $dirhfile`
+    fi
+else
+    dir=`cat $dirfile`
+    if [[ -d $dir  ]]; then
+        cd $dir
+    else
+        dir=$HOME
+    fi
+fi
+
+function pushd {
+    builtin pushd "$@"
+    echo $PWD > $dirfile
+    echo $PWD > $dirhfile
+
+}
+
+function popd {
+    builtin popd "$@"
+    echo $PWD > $dirfile
+    echo $PWD > $dirhfile
+
+}
+
+function cd {
+    builtin cd "$@"
+    echo $PWD > $dirfile
+    echo $PWD > $dirhfile
+
+}

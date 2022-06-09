@@ -1,39 +1,43 @@
-# Required:
+# check syntacs error
 [[plugins]]
 repo = 'vim-syntastic/syntastic'
 
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
+# repeat non-native commands
 [[plugins]]
 repo = 'tpope/vim-repeat'
 
+# automatically surround with parentheses
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+# type 'gcc' to comment out
 [[plugins]]
 repo = 'tpope/vim-commentary'
 
+# type ':NERDTree' to see the file system
 [[plugins]]
 repo = 'preservim/nerdtree'
 
+# type '<C-Y>,' to expand html/css tags
 [[plugins]]
 repo = 'mattn/emmet-vim'
 
+# type ':e <file path>' to open a file in a new tab, type C-p or C-n to switch tabs
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 
+# linter
 [[plugins]]
 repo = 'dense-analysis/ale'
 
+# eye-friendly theme
 [[plugins]]
 repo = 'jnurmine/Zenburn'
 
+# shows a git diff in the sign column
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-
+# type "\t" to move the cursor to the specified letter's place
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
