@@ -7,7 +7,7 @@ if [ $SHLVL = 1 ]; then
 fi
 
 # environment variable
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 
 # the setting of the history command
 HISTFILE=~/.zsh_history

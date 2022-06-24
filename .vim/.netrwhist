@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/yoshisaur/workspace/lectures/operating-system/worklog/golang'
+let g:netrw_dirhist_8='/Users/yoshisaur/workspace/lectures/operating-system/worklog/golang/.github'
+let g:netrw_dirhist_7='/Users/yoshisaur/workspace/lectures/operating-system/uryukyu-lecture-OS/1.x'
+let g:netrw_dirhist_6='/Users/yoshisaur/workspace/lectures/software-development/python_scripts/gpt2/script'
+let g:netrw_dirhist_5='/Users/yoshisaur/workspace/lectures/advanced_information_technology/processing/keyboardSVM'
+let g:netrw_dirhist_4='/Users/yoshisaur/workspace/lectures/script'
+let g:netrw_dirhist_3='/Users/yoshisaur/workspace/lectures/software-development/KonoChat/api'
+let g:netrw_dirhist_2='/Users/yoshisaur/workspace/lectures/software-development/KonoChat'
+let g:netrw_dirhist_1='/Users/yoshisaur/.config/nvim'

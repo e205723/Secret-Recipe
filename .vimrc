@@ -57,3 +57,28 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#buffer_idx_format = {'0': '0 ', '1': '1 ', '2': '2 ', '3': '3 ', '4': '4 ', '5': '5 ', '6': '6 ', '7': '7 ', '8': '8 ', '9': '9 '}
 set ttimeoutlen=50
+
+" ddc
+call ddc#custom#patch_global('sources', [
+  \ 'around',
+  \ 'vim-lsp',
+  \ 'file'
+  \ ])
+call ddc#custom#patch_global('sourceOptions', {
+  \ '_': {
+  \   'matchers': ['matcher_head'],
+  \   'sorters': ['sorter_rank'],
+  \   'converters': ['converter_remove_overlap'],
+  \ },
+  \ 'around': {'mark': 'Around'},
+  \ 'vim-lsp': {
+  \   'mark': 'LSP',
+  \   'matchers': ['matcher_head'],
+  \   'forceCompletionPattern': '\.|:|->|"\w+/*',
+  \  },
+  \ 'file': {
+  \   'mark': 'file',
+  \   'isVolatile': v:true, 
+  \   'forceCompletionPattern': '\S/\S*'
+  \ }})
+call ddc#enable()
