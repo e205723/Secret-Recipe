@@ -82,3 +82,6 @@ call ddc#custom#patch_global('sourceOptions', {
   \   'forceCompletionPattern': '\S/\S*'
   \ }})
 call ddc#enable()
+
+" lsp
+let g:lsp_diagnostics_echo_cursor = 1

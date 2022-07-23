@@ -39,6 +39,7 @@ repo = 'airblade/vim-gitgutter'
 repo = 'easymotion/vim-easymotion'
 
 # language server
+# run :LspInstallServer to install a language server
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 [[plugins]]
